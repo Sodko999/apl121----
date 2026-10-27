@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="APL121CodeQuest"/>
+        <attribute name="authors" value="joshh"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-27 04:53:15 PM"/>
+        <attribute name="created" value="am9zaGg7U1pESzsyMDI2LTEwLTI3OzAzOjQyOjI5IFBNOzIxNDA="/>
+        <attribute name="edited" value="am9zaGg7U1pESzsyMDI2LTEwLTI3OzA0OjUzOjE1IFBNOzE7MjI0Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#1079;&#1072;&#1081;" type="Real" array="False" size=""/>
+            <declare name="&#1093;&#1199;&#1083;&#1101;&#1101;&#1083;&#1090;" type="Integer" array="False" size=""/>
+            <declare name="&#1096;&#1257;&#1085;&#1257;" type="Boolean" array="False" size=""/>
+            <declare name="&#1085;&#1080;&#1081;&#1090;" type="Real" array="False" size=""/>
+            <declare name="&#1082;&#1084;" type="Integer" array="False" size=""/>
+            <declare name="&#1090;&#1257;&#1083;&#1073;&#1257;&#1088;&#1061;&#1199;&#1089;&#1085;&#1101;&#1075;&#1090;" type="Real" array="False" size=""/>
+            <declare name="&#1199;&#1085;&#1101;1" type="Real" array="False" size=""/>
+            <declare name="&#1199;&#1085;&#1101;2" type="Real" array="False" size=""/>
+            <declare name="&#1199;&#1085;&#1101;3" type="Real" array="False" size=""/>
+            <declare name="&#1090;&#1199;&#1088;" type="Real" array="False" size=""/>
+            <output expression="&quot;&#1079;&#1072;&#1084;&#1099;&#1085; &#1079;&#1072;&#1081; (&#1082;&#1084;)&quot;" newline="True"/>
+            <do expression="&#1079;&#1072;&#1081; &lt; 0">
+                <input variable="&#1079;&#1072;&#1081;"/>
+            </do>
+            <output expression="&quot;&#1061;&#1199;&#1083;&#1101;&#1101;&#1083;&#1075;&#1080;&#1081;&#1085; &#1093;&#1091;&#1075;&#1072;&#1094;&#1072;&#1072; (&#1084;&#1080;&#1085;&#1091;&#1090;)&quot;" newline="True"/>
+            <do expression="&#1093;&#1199;&#1083;&#1101;&#1101;&#1083;&#1090; &lt; 0">
+                <input variable="&#1093;&#1199;&#1083;&#1101;&#1101;&#1083;&#1090;"/>
+            </do>
+            <output expression="&quot;&#1096;&#1257;&#1085;&#1080;&#1081;&#1085; &#1090;&#1072;&#1088;&#1080;&#1092;(True/False)&quot;" newline="True"/>
+            <input variable="&#1096;&#1257;&#1085;&#1257;"/>
+            <assign variable="&#1085;&#1080;&#1081;&#1090;" expression="2000 + (&#1079;&#1072;&#1081; * 1500) + (&#1093;&#1199;&#1083;&#1101;&#1101;&#1083;&#1090; * 200)"/>
+            <if expression="&#1096;&#1257;&#1085;&#1257; = True">
+                <then>
+                    <assign variable="&#1085;&#1080;&#1081;&#1090;" expression="&#1085;&#1080;&#1081;&#1090; * 1.20"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;&#1053;&#1080;&#1081;&#1090; &#1090;&#1257;&#1083;&#1073;&#1257;&#1088; (&#8366;):&quot;" newline="True"/>
+            <output expression="&#1085;&#1080;&#1081;&#1090;" newline="True"/>
+            <call expression="&#1061;&#1199;&#1089;&#1085;&#1101;&#1075;&#1090;()"/>
+            <assign variable="&#1199;&#1085;&#1101;1" expression="&#1085;&#1080;&#1081;&#1090;"/>
+            <do expression="&#1199;&#1085;&#1101;2 &lt; 0 or &#1199;&#1085;&#1101;3 &lt; 0">
+                <output expression="&quot;2-&#1088; &#1072;&#1103;&#1083;&#1083;&#1099;&#1085; &#1090;&#1257;&#1083;&#1073;&#1257;&#1088;:&quot;" newline="True"/>
+                <input variable="&#1199;&#1085;&#1101;2"/>
+                <output expression="&quot;3-&#1088; &#1072;&#1103;&#1083;&#1083;&#1099;&#1085; &#1090;&#1257;&#1083;&#1073;&#1257;&#1088;:&quot;" newline="True"/>
+                <input variable="&#1199;&#1085;&#1101;3"/>
+            </do>
+            <if expression="&#1199;&#1085;&#1101;1 &gt; &#1199;&#1085;&#1101;2">
+                <then>
+                    <assign variable="&#1090;&#1199;&#1088;" expression="&#1199;&#1085;&#1101;1"/>
+                    <assign variable="&#1199;&#1085;&#1101;1" expression="&#1199;&#1085;&#1101;2"/>
+                    <assign variable="&#1199;&#1085;&#1101;2" expression="&#1090;&#1199;&#1088;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="&#1199;&#1085;&#1101;1 &gt; &#1199;&#1085;&#1101;3">
+                <then>
+                    <assign variable="&#1090;&#1199;&#1088;" expression="&#1199;&#1085;&#1101;1"/>
+                    <assign variable="&#1199;&#1085;&#1101;1" expression="&#1199;&#1085;&#1101;3"/>
+                    <assign variable="&#1199;&#1085;&#1101;3" expression="&#1090;&#1199;&#1088;"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="&#1199;&#1085;&#1101;2 &gt; &#1199;&#1085;&#1101;3">
+                <then>
+                    <assign variable="&#1090;&#1199;&#1088;" expression="&#1199;&#1085;&#1101;2"/>
+                    <assign variable="&#1199;&#1085;&#1101;2" expression="&#1199;&#1085;&#1101;3"/>
+                    <assign variable="&#1199;&#1085;&#1101;3" expression="&#1090;&#1199;&#1088;"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;&#1061;&#1072;&#1084;&#1075;&#1080;&#1081;&#1085; &#1093;&#1103;&#1084;&#1076;: &quot; &amp; &#1199;&#1085;&#1101;1" newline="True"/>
+            <output expression="&quot;&#1044;&#1091;&#1085;&#1076;&#1072;&#1078; &#1199;&#1085;&#1101;: &quot; &amp; &#1199;&#1085;&#1101;2" newline="True"/>
+            <output expression="&quot;&#1061;&#1072;&#1084;&#1075;&#1080;&#1081;&#1085; &#1199;&#1085;&#1101;&#1090;&#1101;&#1081;: &quot; &amp; &#1199;&#1085;&#1101;3" newline="True"/>
+        </body>
+    </function>
+    <function name="&#1061;&#1199;&#1089;&#1085;&#1101;&#1075;&#1090;" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#1082;&#1084;" type="Integer" array="False" size=""/>
+            <declare name="&#1093;&#1199;&#1089;&#1085;&#1101;&#1075;&#1090;&#1080;&#1081;&#1085;&#1058;&#1257;&#1083;&#1073;&#1257;&#1088;" type="Real" array="False" size=""/>
+            <for variable="&#1082;&#1084;" start="1" end="10" direction="inc" step="1">
+                <assign variable="&#1093;&#1199;&#1089;&#1085;&#1101;&#1075;&#1090;&#1080;&#1081;&#1085;&#1058;&#1257;&#1083;&#1073;&#1257;&#1088;" expression="2000 + (&#1082;&#1084; * 1500)"/>
+                <output expression="&#1082;&#1084; &amp; &quot; &#1082;&#1084; = &quot; &amp; &#1093;&#1199;&#1089;&#1085;&#1101;&#1075;&#1090;&#1080;&#1081;&#1085;&#1058;&#1257;&#1083;&#1073;&#1257;&#1088; &amp; &quot; &#8366;&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
